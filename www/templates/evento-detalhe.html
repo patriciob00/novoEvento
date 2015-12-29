@@ -1,0 +1,36 @@
+<ion-view view-title="{{evento.nome}}">
+  <ion-content class="padding">
+  	<div class="list card">
+  		
+  		<div class="item item-avatar">
+    		<img src="{{evento.foto}}">
+    		<h2>{{ evento.nome }}</h2>
+    		<p>{{evento.data}}</p>
+  		</div>
+
+  		<div class="item item-body">
+    		<img class="full-image" src="{{evento.foto}}">
+    		<p>{{evento.descricao}}</p>
+    		<p>
+      			<a href="#" class="subdued"> Like</a>
+      			<a href="#" class="subdued"> Comments</a>
+    		</p>
+  		</div>
+
+  		<div class="item tabs tabs-secondary tabs-icon-left">
+    		<a class="tab-item" href="#">
+      			<i class="icon ion-thumbsup"></i>
+      			Gostar
+    		</a>
+    		<a class="tab-item" href="#">
+      			<i class="icon ion-chatbox"></i>
+      			Comentar
+    		</a>
+    		<a class="tab-item" href="#">
+      			<i class="icon ion-share"></i>
+      			Share
+    		</a>
+  		</div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="Eventos">
+	
+	<ion-nav-buttons side="secondary">
+    <button class="button button-icon icon ion-ios-search-strong" ng-click="showFilterBar()">
+    </button>
+  </ion-nav-buttons>
+
+	<ion-content class="padding"  direction="y" scrollbar-y="false">
+			<ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()">
+    		</ion-refresher>
+		<br/><br/>
+			<ion-list  >
+				<ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in eventos"	href="#/tab/eventos/{{item.id}}"
+					can-swipe="true">
+					<img ng-src="{{item.foto}}">
+					<h2>{{item.nome}}</h2>
+					<h3>{{item.data}}</h3>
+					<ion-option-button class="assertive-bg" ng-click="excluir($index)">Excluir</ion-option-button>	
+				</ion-item>
+			</ion-list>
+
+		<div ng-if="eventos !== undefined && !eventos.length" class="no-results">
+      		<p>Nenhum resultado encontrado...</p>
+    	</div>
+	</ion-content>
+</ion-view>
